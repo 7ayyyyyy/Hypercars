@@ -1,0 +1,316 @@
+/* ============================================
+   Car detail page — specific styles
+   ============================================ */
+
+.car-hero {
+  position: relative;
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at center, rgba(220, 38, 38, 0.1), transparent 70%),
+    var(--color-bg);
+}
+
+.car-hero__canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.car-hero__canvas canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.car-hero__overlay {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: var(--space-7) var(--space-5);
+  pointer-events: none;
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.car-hero__brand {
+  font-size: var(--fs-small);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+  font-weight: 600;
+}
+
+.car-hero__name {
+  font-size: var(--fs-1);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  margin-bottom: var(--space-4);
+  text-shadow: 0 2px 40px rgba(0, 0, 0, 0.8);
+}
+
+.car-hero__hint {
+  font-size: var(--fs-tiny);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-top: var(--space-4);
+}
+
+.car-detail {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--space-7);
+  align-items: start;
+  margin-top: var(--space-7);
+}
+
+@media (max-width: 900px) {
+  .car-detail { grid-template-columns: 1fr; }
+}
+
+/* Spec sheet */
+
+.spec-sheet {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-6);
+  position: sticky;
+  top: 100px;
+}
+
+.spec-sheet__title {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-dim);
+  margin-bottom: var(--space-4);
+  font-weight: 600;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+  gap: var(--space-3);
+}
+
+.spec-row:last-child { border-bottom: none; }
+
+.spec-row__label {
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.spec-row__value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-text);
+  text-align: right;
+  font-size: var(--fs-small);
+}
+
+.spec-row__value--accent {
+  color: var(--color-accent);
+}
+
+.spec-headline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.spec-headline__item {
+  text-align: center;
+}
+
+.spec-headline__value {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  line-height: 1;
+  margin-bottom: var(--space-1);
+}
+
+.spec-headline__label {
+  font-size: 0.625rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-dim);
+  font-weight: 600;
+}
+
+/* Narrative */
+
+.car-narrative h2 {
+  font-size: var(--fs-3);
+  margin-bottom: var(--space-4);
+}
+
+.car-narrative p {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-5);
+}
+
+.car-narrative p:last-child { margin-bottom: 0; }
+
+.car-narrative blockquote {
+  margin: var(--space-6) 0;
+  padding: var(--space-5) var(--space-6);
+  border-left: 3px solid var(--color-accent);
+  background: var(--color-bg-card);
+  font-style: italic;
+  color: var(--color-text);
+  font-size: 1.125rem;
+  line-height: 1.6;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* Gallery */
+
+.gallery {
+  margin: var(--space-7) 0;
+}
+
+.gallery__main {
+  aspect-ratio: 16/9;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: var(--space-3);
+  position: relative;
+  cursor: zoom-in;
+}
+
+.gallery__main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity var(--duration) var(--ease-out);
+}
+
+.gallery__thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+}
+
+@media (max-width: 600px) {
+  .gallery__thumbs { grid-template-columns: repeat(3, 1fr); }
+}
+
+.gallery__thumb {
+  aspect-ratio: 4/3;
+  background: var(--color-bg-card);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color var(--duration) var(--ease-out);
+  padding: 0;
+}
+
+.gallery__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__thumb:hover { border-color: var(--color-border-strong); }
+.gallery__thumb[aria-selected="true"] { border-color: var(--color-accent); }
+
+.gallery__placeholder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--color-bg-elevated), var(--color-bg-card));
+  color: var(--color-text-dim);
+  font-size: var(--fs-tiny);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+/* Related cars */
+
+.related {
+  margin-top: var(--space-9);
+  padding-top: var(--space-7);
+  border-top: 1px solid var(--color-border);
+}
+
+.related h2 {
+  font-size: var(--fs-3);
+  margin-bottom: var(--space-5);
+}
+
+/* Back link */
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--fs-small);
+  margin-bottom: var(--space-5);
+  padding: var(--space-2) 0;
+}
+
+.back-link:hover {
+  color: var(--color-accent);
+}
+
+/* Lightbox */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: var(--space-5);
+  cursor: zoom-out;
+}
+
+.lightbox[data-open="true"] { display: flex; }
+
+.lightbox__img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: var(--radius);
+}
+
+.lightbox__close {
+  position: absolute;
+  top: var(--space-5);
+  right: var(--space-5);
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+}
+
+.lightbox__close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
