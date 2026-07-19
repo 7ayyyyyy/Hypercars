@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Hypercars Encyclopedia — 22 of the world's most extreme production hypercars, from Bugatti to Rimac. Specs, history, and 3D showrooms.">
+  <meta name="theme-color" content="#0a0a0c">
+  <title>Hypercars Encyclopedia — The World's Greatest Hypercars</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23dc2626'/%3E%3Ctext x='50' y='65' font-family='Arial' font-weight='900' font-size='52' fill='white' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-logo">
+        <span class="site-logo__mark">H</span>
+        <span>Hypercars</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="garage.html">Garage</a>
+        <a href="ranking.html">Ranking</a>
+        <a href="compare.html">Compare</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO with 3D rotating hypercar -->
+    <section class="hero" aria-label="Featured hypercar in 3D">
+      <div class="hero__canvas" id="hero-canvas" role="img" aria-label="3D rotating hypercar model"></div>
+
+      <div class="hero__content">
+        <span class="eyebrow reveal">Volume 01 · The Encyclopedia</span>
+        <h1 class="hero__title reveal">The world's greatest hypercars</h1>
+        <p class="hero__subtitle reveal">Twenty-two of the most extreme production cars ever built. 1,500 horsepower. 300 mph. One-of-a-kind.</p>
+        <div class="hero__actions">
+          <a href="garage.html" class="btn btn--primary hover-lift">
+            Browse the garage
+            <span aria-hidden="true">→</span>
+          </a>
+          <a href="ranking.html" class="btn btn--ghost hover-lift">See the rankings</a>
+        </div>
+      </div>
+
+      <div class="hero__featured-name" id="hero-featured-name" aria-live="polite">
+        <small>Now showing</small>
+        <span id="hero-car-name">Bugatti Tourbillon</span>
+      </div>
+
+      <div class="hero__scroll-hint" aria-hidden="true">Scroll</div>
+    </section>
+
+    <!-- BY THE NUMBERS -->
+    <div class="stat-strip" role="list" aria-label="Encyclopedia statistics">
+      <div class="stat" role="listitem">
+        <div class="stat__value stat__value-accent" data-counter="22">22</div>
+        <div class="stat__label">Hypercars</div>
+      </div>
+      <div class="stat" role="listitem">
+        <div class="stat__value" data-counter="31149">31,149</div>
+        <div class="stat__label">Combined HP</div>
+      </div>
+      <div class="stat" role="listitem">
+        <div class="stat__value" data-counter="1.69" data-decimals="2">1.69</div>
+        <div class="stat__label">Fastest 0-60 (s)</div>
+      </div>
+      <div class="stat" role="listitem">
+        <div class="stat__value" data-counter="330" data-suffix=" mph">330 mph</div>
+        <div class="stat__label">Theoretical top speed</div>
+      </div>
+    </div>
+
+    <!-- FEATURED CARS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Editor's selection</span>
+          <h2 class="section-header__title">The icons</h2>
+          <p class="section-header__lede">Cars that have defined what a hypercar can be — from the first 300 mph run to the first all-electric 1,900 hp machine.</p>
+        </div>
+        <div class="grid grid-3" id="featured-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section" style="background: var(--color-bg-elevated);">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">What you'll find</span>
+          <h2 class="section-header__title">Built for the obsessed</h2>
+        </div>
+        <div class="grid grid-3">
+          <div class="feature-card hover-lift">
+            <div class="feature-card__icon">3D</div>
+            <h3 class="feature-card__title">Interactive 3D showrooms</h3>
+            <p class="feature-card__body">Every car is rendered as a procedural 3D model you can rotate, inspect, and study. No two cars look the same — each one carries its brand's color identity.</p>
+          </div>
+          <div class="feature-card hover-lift">
+            <div class="feature-card__icon">22</div>
+            <h3 class="feature-card__title">Complete specs</h3>
+            <p class="feature-card__body">Engine, transmission, drivetrain, weight, dimensions, production numbers. The data you'd want if you were spec'ing one for your own garage.</p>
+          </div>
+          <div class="feature-card hover-lift">
+            <div class="feature-card__icon">↔</div>
+            <h3 class="feature-card__title">Compare anything</h3>
+            <p class="feature-card__body">Pick two or three cars and see them side by side. The leaderboard ranks the lot by power, speed, and price-to-performance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>
+        © <span data-current-year>2026</span> Hypercars Encyclopedia. A reference project.
+      </div>
+      <div>
+        <a href="about.html">About</a> ·
+        <a href="https://commons.wikimedia.org/" rel="noopener" target="_blank">Image credits</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/data/cars.js"></script>
+  <script src="assets/js/three-showroom.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script>
+    (function () {
+      'use strict';
+
+      // 1. Render featured grid
+      const featuredGrid = document.getElementById('featured-grid');
+      const featured = window.FEATURED_CARS.slice(0, 6);
+      featured.forEach((car, i) => {
+        const card = window.siteUtils.renderCarCard(car);
+        card.style.animationDelay = `${i * 80}ms`;
+        featuredGrid.appendChild(card);
+      });
+
+      // 2. Hero 3D showroom with rotating featured cars
+      const container = document.getElementById('hero-canvas');
+      const nameLabel = document.getElementById('hero-car-name');
+
+      // Wait for three.js to load
+      const showroom = new HypercarShowroom(container, {
+        car: featured[0],
+        interactive: true,
+        autoRotate: true,
+        background: 'gradient'
+      });
+
+      showroom.init().then(() => {
+        // Cycle through featured cars every 6s
+        let idx = 0;
+        const cycle = () => {
+          idx = (idx + 1) % featured.length;
+          const next = featured[idx];
+          showroom.swapCar(next);
+          // Fade name change
+          nameLabel.style.opacity = '0';
+          setTimeout(() => {
+            nameLabel.textContent = `${next.brand} ${next.model}`;
+            nameLabel.style.opacity = '0.7';
+          }, 200);
+        };
+        const intervalId = setInterval(cycle, 6000);
+
+        // Pause auto-cycle when user interacts
+        const container = document.getElementById('hero-canvas');
+        container.addEventListener('mousedown', () => clearInterval(intervalId));
+        container.addEventListener('touchstart', () => clearInterval(intervalId));
+      });
+
+      // 3. Animate stat counters
+      const counters = document.querySelectorAll('[data-counter]');
+      const animateCount = (el) => {
+        const target = parseFloat(el.dataset.counter);
+        const decimals = parseInt(el.dataset.decimals || '0');
+        const suffix = el.dataset.suffix || '';
+        const duration = 1500;
+        const start = performance.now();
+        const startVal = 0;
+
+        const tick = (now) => {
+          const elapsed = now - start;
+          const progress = Math.min(elapsed / duration, 1);
+          // Ease out cubic
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const value = startVal + (target - startVal) * eased;
+          el.textContent = value.toFixed(decimals).replace(/\B(?=(\d{3})+(?!\d))/g, ',') + suffix;
+          if (progress < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCount(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+
+      counters.forEach(c => observer.observe(c));
+    })();
+  </script>
+</body>
+</html>

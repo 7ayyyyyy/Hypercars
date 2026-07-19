@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse all 22 hypercars in the encyclopedia. Filter by powertrain, decade, and price. Sort by power, speed, or 0-60.">
+  <meta name="theme-color" content="#0a0a0c">
+  <title>Garage — All 22 Hypercars</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23dc2626'/%3E%3Ctext x='50' y='65' font-family='Arial' font-weight='900' font-size='52' fill='white' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-logo">
+        <span class="site-logo__mark">H</span>
+        <span>Hypercars</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="garage.html">Garage</a>
+        <a href="ranking.html">Ranking</a>
+        <a href="compare.html">Compare</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow reveal">The full collection</span>
+          <h1 class="section-header__title reveal">The garage</h1>
+          <p class="section-header__lede reveal">Twenty-two hypercars, filterable and sortable. Find the one that speaks to you.</p>
+        </div>
+
+        <!-- Filter bar -->
+        <div class="filter-bar" role="region" aria-label="Filter cars">
+          <div class="filter-group">
+            <label class="filter-group__label" id="filter-powertrain-label">Powertrain</label>
+            <div class="filter-group__buttons" role="group" aria-labelledby="filter-powertrain-label">
+              <button class="filter-btn" data-filter="powertrain" data-value="all" aria-pressed="true">All</button>
+              <button class="filter-btn" data-filter="powertrain" data-value="ice" aria-pressed="false">ICE</button>
+              <button class="filter-btn" data-filter="powertrain" data-value="hybrid" aria-pressed="false">Hybrid</button>
+              <button class="filter-btn" data-filter="powertrain" data-value="ev" aria-pressed="false">Electric</button>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <label class="filter-group__label" for="filter-decade">Decade</label>
+            <select class="filter-select" id="filter-decade" data-filter="decade">
+              <option value="all">All years</option>
+              <option value="2020s">2020s</option>
+              <option value="2010s">2010s</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label class="filter-group__label" for="filter-price">Price tier</label>
+            <select class="filter-select" id="filter-price" data-filter="price">
+              <option value="all">All prices</option>
+              <option value="sub1m">Under $1M</option>
+              <option value="1to2m">$1M – $2M</option>
+              <option value="2to3m">$2M – $3M</option>
+              <option value="over3m">$3M+</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label class="filter-group__label" for="filter-sort">Sort by</label>
+            <select class="filter-select" id="filter-sort" data-sort>
+              <option value="featured">Featured</option>
+              <option value="power">Most powerful</option>
+              <option value="zero_sixty">Fastest 0-60</option>
+              <option value="top_speed">Highest top speed</option>
+              <option value="price_asc">Price (low to high)</option>
+              <option value="price_desc">Price (high to low)</option>
+              <option value="year">Newest</option>
+            </select>
+          </div>
+        </div>
+
+        <p class="results-count" id="results-count" aria-live="polite">
+          Showing <strong>22</strong> of 22 cars
+        </p>
+
+        <div class="grid grid-3" id="cars-grid" role="list">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>© <span data-current-year>2026</span> Hypercars Encyclopedia.</div>
+      <div><a href="about.html">About</a></div>
+    </div>
+  </footer>
+
+  <script src="assets/data/cars.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/garage.js"></script>
+  <script src="assets/js/animations.js"></script>
+</body>
+</html>

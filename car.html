@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0a0c">
+  <title>Loading… — Hypercars Encyclopedia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/car-detail.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23dc2626'/%3E%3Ctext x='50' y='65' font-family='Arial' font-weight='900' font-size='52' fill='white' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-logo">
+        <span class="site-logo__mark">H</span>
+        <span>Hypercars</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="garage.html">Garage</a>
+        <a href="ranking.html">Ranking</a>
+        <a href="compare.html">Compare</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div id="car-content">
+      <!-- Rendered by car-detail.js -->
+      <p style="padding: 4rem; text-align: center;">Loading car…</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div>© <span data-current-year>2026</span> Hypercars Encyclopedia.</div>
+      <div><a href="about.html">About</a></div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox__close" aria-label="Close">×</button>
+    <img class="lightbox__img" id="lightbox-img" src="" alt="">
+  </div>
+
+  <script src="assets/data/cars.js"></script>
+  <script src="assets/js/three-showroom.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/car-detail.js"></script>
+  <script src="assets/js/animations.js"></script>
+</body>
+</html>
